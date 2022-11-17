@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: "sono", sans-serif;
+  background-image: url("online-shop.png");
+}
+#container {
+  position: sticky;
+  top: 0;
+  background-color: rgba(101, 95, 95, 0.85);
+  padding: 0;
+}
+h1 {
+  color: whitesmoke;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 0;
+}
+#first {
+  font-size: 1.7em;
+  color: pink;
+  text-align: center;
+}
+#userinput {
+  font-size: 1.3em;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+#explain {
+  margin-left: 20px;
+  color: whitesmoke;
+}
+li {
+  font-size: 1.3em;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin: 0 0;
+  width: 50%;
+}
+.done {
+  text-decoration: line-through;
+}
+button {
+  margin: 5px 10px;
+  background-color: whitesmoke;
+  padding: 3px;
+  border-radius: 5px;
+}
