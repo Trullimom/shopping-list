@@ -9,16 +9,16 @@ function inputLength() {
 
 function addListItem() {
   var li = document.createElement("li");
-  li.appendChild(document.createTextNode(input.value));
+  let span = document.createElement("span");
+  span.appendChild(document.createTextNode(input.value));
+  li.appendChild(span);
   ul.appendChild(li);
   input.value = "";
-  // this works too --> btnNextItem.onclick = deleteItem;
-  li.addEventListener("click", toggleItem);
+  span.addEventListener("click", toggleItem);
 
   var btnNextItem = document.createElement("button");
   btnNextItem.appendChild(document.createTextNode("Delete"));
   li.appendChild(btnNextItem);
-  btnNextItem.classList.add("margin");
   // this works too --> btnNextItem.onclick = deleteItem;
   btnNextItem.addEventListener("click", deleteItem);
 }
@@ -37,7 +37,7 @@ function addAfterClick() {
   }
 }
 
-function addAfterKeypress() {
+function addAfterKeypress(event) {
   if (inputLength() > 0 && event.which === 13) {
     addListItem();
   }
@@ -47,7 +47,7 @@ enterButton.addEventListener("click", addAfterClick);
 input.addEventListener("keypress", addAfterKeypress);
 
 //to toggle classname .done whithin already existing items
-var listClick = document.querySelectorAll("li");
+var listClick = document.querySelectorAll("span");
 for (i = 0; i < listClick.length; i++) {
   listClick[i].onclick = toggleItem;
   // this works too! --> listClick[i].addEventListener("click", toggleItem);

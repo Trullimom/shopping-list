@@ -31,13 +31,18 @@ h1 {
   margin-left: 20px;
   color: whitesmoke;
 }
-li {
+ul {
+  display: flex;
+  flex-direction: column;
+}
+ul li {
   font-size: 1.3em;
+}
+ul li span:hover {
   cursor: -webkit-grab;
   cursor: grab;
-  margin: 0 0;
-  width: 50%;
 }
+
 .done {
   text-decoration: line-through;
 }
@@ -46,4 +51,8 @@ button {
   background-color: whitesmoke;
   padding: 3px;
   border-radius: 5px;
+}
+button:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
 }
